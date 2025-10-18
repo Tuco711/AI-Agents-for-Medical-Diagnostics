@@ -2,11 +2,11 @@
 
 **Possible health issues**
 
-- **Panic disorder with anxiety‑related hyperventilation**  
-  *Reason*: The episodic chest pain, palpitations, dizziness, diaphoresis, and sense of impending doom are classic panic‑attack symptoms captured in all three reports. Normal cardiac and pulmonary work‑up, combined with a documented anxiety diagnosis, strongly point to a psychogenic origin of the symptoms.
+- **Paroxysmal cardiac arrhythmia (e.g., SVT/VT, CPVT, or a brief ventricular/supraventricular tachycardia)**
+  - Episodes are 10–20 min long, with palpitations, dizziness, diaphoresis, and a feeling of impending doom—all classic ACS‑like signatures of a brief, sometimes silent tachyarrhythmia that a 24‑h Holter can miss. The Holter only shows occasional PVCs, so an intermittent, low‑frequency arrhythmia is still plausible.
 
-- **Microvascular angina / coronary vasospasm**  
-  *Reason*: A younger adult with chest pain that is otherwise normal on resting ECG, enzymes, and echocardiogram fits the typical presentation of vasospastic (microvascular) angina. Triggered by caffeine, stress, or GERD— all noted in the patient’s history—this condition can cause transient chest discomfort and palpitations that are not always visible on a single 24‑h Holter.
+- **Panic disorder / anxiety‑driven hyperventilation syndrome**
+  - The patient reports recurrent, unexpected chest pain, SOB, sweating, dizziness, and doom‑spells that are perfectly aligned with panic attack criteria. Psychological work‑up lists panic disorder, health‑related anxiety, and GAD, and the cardiopulmonary evaluations are unremarkable—typical of neuro‑cardiogenic or hyperventilation‑induced episodes.
 
-- **Premature ventricular complex burden with potential PVC‑induced cardiomyopathy**  
-  *Reason*: The Holter documented occasional PVCs even though the exact burden was not quantified. Frequent PVCs (>10 % of beats or >5 000/day) are a well‑documented risk factor for reversible cardiomyopathy. Monitoring the PVC load over an extended period or with cardiac MRI can confirm whether ventricular ectopy is contributing to the patient’s symptoms.
+- **GERD or esophageal spasm mimicking cardiac pain**
+  - A burning/chest‑tightness often associated with reflux can produce pain that feels cardiac. GERD can escalate anxiety, creating a feedback loop of chest discomfort and panic. The reports note GERD as a potential culprit, and the lack of objective cardiac or pulmonary pathology keeps reflux as a likely contributor.

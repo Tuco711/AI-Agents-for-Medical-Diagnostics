@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from Utils.Agents import Cardiologist, Psychologist, Pulmonologist, MultidisciplinaryTeam
 from dotenv import load_dotenv
-import json, os
+import json, os, time
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print("Starting the Medical Report Analysis...\n")
+st = time.time()
 
 # Loading API key from a dotenv file.
 API_KEY = os.getenv("OPENROUTER_API_KEY")
@@ -57,4 +59,5 @@ with open(txt_output_path, "w", encoding="utf-8") as txt_file:
 
 print(f"Final diagnosis has been saved to {txt_output_path}")
 
+print(f"\nExecution Time: {time.time() - st} seconds")
 
