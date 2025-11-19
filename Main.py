@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 from __future__ import annotations
 import os, json, re
 from pathlib import Path
@@ -6,10 +6,8 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
 
-# Agentes do teu projeto
 from Utils.Agents import Cardiologist, Psychologist, Pulmonologist, MultidisciplinaryTeam
 
-<<<<<<< HEAD
 # =========================
 # Configuração de paths
 # =========================
@@ -17,11 +15,6 @@ BASE_DIR     = Path(__file__).parent
 REPORTS_DIR  = BASE_DIR / "Medical Reports"
 RESULTS_DIR  = BASE_DIR / "Results"
 RESULTS_DIR.mkdir(exist_ok=True)
-=======
-# read the medical report
-with open("Medical Reports\Medical Rerort - Michael Johnson - Panic Attack Disorder.txt", "r", encoding="utf-8") as file:
-    medical_report = file.read()
->>>>>>> 084c1363a24b59a94dc770c45f8770bb938a83ea
 
 # =========================
 # ENV
@@ -61,18 +54,9 @@ def run_single_report(path: Path):
         "Pulmonologist": Pulmonologist(medical_report),
     }
 
-<<<<<<< HEAD
     # Corre agentes em paralelo e recolhe respostas
     def get_response(agent_name, agent):
         return agent_name, agent.run()
-=======
-# Run the MultidisciplinaryTeam agent to generate the final diagnosis
-final_diagnosis = team_agent.run()
-final_diagnosis_text = "### Final Diagnosis:\n\n" + final_diagnosis
-# Save inside the project's Results directory next to this script
-base_dir = os.path.dirname(os.path.abspath(__file__))
-txt_output_path = os.path.join(base_dir, "Results", "final_diagnosis_Michel_Johnson.txt")
->>>>>>> 084c1363a24b59a94dc770c45f8770bb938a83ea
 
     responses = {}
     with ThreadPoolExecutor(max_workers=len(agents)) as executor:
@@ -91,7 +75,7 @@ txt_output_path = os.path.join(base_dir, "Results", "final_diagnosis_Michel_John
 
     # Guarda TXT e JSON com timestamp + nome do paciente
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    base_name = f"{patient_name}__diagnosis_{ts}"
+    base_name = f"{patient_name}_diagnosis{ts}"
     txt_output = RESULTS_DIR / f"{base_name}.txt"
     json_output = RESULTS_DIR / f"{base_name}.json"
 
@@ -117,9 +101,9 @@ txt_output_path = os.path.join(base_dir, "Results", "final_diagnosis_Michel_John
 def process_all_reports():
     files = sorted(p for p in REPORTS_DIR.glob("*.txt") if p.is_file())
     if not files:
-        print(f"⚠️  Nenhum .txt encontrado em: {REPORTS_DIR}")
+        print(f" Nenhum .txt encontrado em: {REPORTS_DIR}")
         return
-    print(f"🔎 Encontrados {len(files)} relatórios. A processar...\n")
+    print(f" Encontrados {len(files)} relatórios. A processar...\n")
     for p in files:
         try:
             run_single_report(p)
