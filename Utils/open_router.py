@@ -1,7 +1,13 @@
+from pathlib import Path
 from openai import OpenAI
 import sys
 import io
 import os
+from dotenv import load_dotenv
+from pathlib import Path
+
+env_path = Path(__file__).resolve().parents[1] / '.env'
+load_dotenv(env_path)
 
 # Ensure stdout is configured to UTF-8 to avoid Windows cp1252 encoding errors
 try:
@@ -26,7 +32,7 @@ completion = client.chat.completions.create(
   messages=[
     {
       "role": "user",
-      "content": "What is the meaning of life?"
+      "content": "List the top 5 Cardiologists in coimbra, portugal and their contact details."
     }
   ]
 )

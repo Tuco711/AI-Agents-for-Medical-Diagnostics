@@ -1,0 +1,12 @@
+### Final Diagnosis:
+
+**Possible health issues**
+
+- **Panic disorder with anxiety‑related hyperventilation**  
+  *Reason*: The episodic chest pain, palpitations, dizziness, diaphoresis, and sense of impending doom are classic panic‑attack symptoms captured in all three reports. Normal cardiac and pulmonary work‑up, combined with a documented anxiety diagnosis, strongly point to a psychogenic origin of the symptoms.
+
+- **Microvascular angina / coronary vasospasm**  
+  *Reason*: A younger adult with chest pain that is otherwise normal on resting ECG, enzymes, and echocardiogram fits the typical presentation of vasospastic (microvascular) angina. Triggered by caffeine, stress, or GERD— all noted in the patient’s history—this condition can cause transient chest discomfort and palpitations that are not always visible on a single 24‑h Holter.
+
+- **Premature ventricular complex burden with potential PVC‑induced cardiomyopathy**  
+  *Reason*: The Holter documented occasional PVCs even though the exact burden was not quantified. Frequent PVCs (>10 % of beats or >5 000/day) are a well‑documented risk factor for reversible cardiomyopathy. Monitoring the PVC load over an extended period or with cardiac MRI can confirm whether ventricular ectopy is contributing to the patient’s symptoms.
