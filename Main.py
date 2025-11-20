@@ -9,8 +9,11 @@ from dotenv import load_dotenv
 from Utils.Agents import (
     TriageBalancer,
     SeniorCardiologist,
+    NoviceCardiologist,
     SeniorPsychologist,
+    NovicePsychologist,
     SeniorPulmonologist,
+    NovicePulmonologist,
     MultidisciplinaryTeam,
 )
 
@@ -107,11 +110,14 @@ def run_single_report(path: Path):
     # 2) Instantiate chosen specialist agents
     agents = {}
     if run_all_specialists or selected_specialties.get("Cardiology"):
-        agents["Cardiologist"] = SeniorCardiologist(medical_report)
+        agents["Senior_Cardiologist"] = SeniorCardiologist(medical_report)
+        agents["Novice_Cardiologist"] = NoviceCardiologist(medical_report)
     if run_all_specialists or selected_specialties.get("Psychology"):
-        agents["Psychologist"] = SeniorPsychologist(medical_report)
+        agents["Senior_Psychologist"] = SeniorPsychologist(medical_report)
+        agents["Novice_Psychologist"] = NovicePsychologist(medical_report)
     if run_all_specialists or selected_specialties.get("Pulmonology"):
-        agents["Pulmonologist"] = SeniorPulmonologist(medical_report)
+        agents["Senior_Pulmonologist"] = SeniorPulmonologist(medical_report)
+        agents["Novice_Pulmonologist"] = NovicePulmonologist(medical_report)
  
     # Save triage response in the responses dict for traceability
     responses = {"Triage": triage_response}
@@ -128,9 +134,9 @@ def run_single_report(path: Path):
  
         # Agente de equipa multidisciplinar (igual ao teu fluxo)
         team_agent = MultidisciplinaryTeam(
-            cardiologist_report  = responses.get("Cardiologist"),
-            psychologist_report  = responses.get("Psychologist"),
-            pulmonologist_report = responses.get("Pulmonologist"),
+            cardiologist_report  = responses.get("Senior_Cardiologist", "") + responses.get("Novice_Cardiologist", ""),
+            psychologist_report  = responses.get("Senior_Psychologist", "") + responses.get("Novice_Psychologist", ""),
+            pulmonologist_report = responses.get("Senior_Pulmonologist", "") + responses.get("Novice_Pulmonologist", ""),
         )
         final_diagnosis3 = team_agent.run()
  
