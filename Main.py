@@ -6,7 +6,13 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
 
-from Utils.Agents import Cardiologist, Psychologist, Pulmonologist, MultidisciplinaryTeam
+from Utils.Agents import (
+    TriageBalancer,
+    SeniorCardiologist,
+    SeniorPsychologist,
+    SeniorPulmonologist,
+    MultidisciplinaryTeam,
+)
 
 # =========================
 # Configuração de paths
@@ -46,57 +52,112 @@ def run_single_report(path: Path):
     # Lê o relatório
     medical_report = path.read_text(encoding="utf-8", errors="ignore")
     patient_name   = extract_patient_name_from_filename(path)
-
-    # Instancia agentes com o texto do relatório (igual ao teu código)
-    agents = {
-        "Cardiologist":  Cardiologist(medical_report),
-        "Psychologist":  Psychologist(medical_report),
-        "Pulmonologist": Pulmonologist(medical_report),
-    }
-
-    # Corre agentes em paralelo e recolhe respostas
+ 
+    # 1) Run triage to decide which specialists to invoke
+    triage_agent = TriageBalancer(medical_report)
+    triage_response = triage_agent.run()
+    selected_specialties = {"Cardiology": False, "Psychology": False, "Pulmonology": False}
+    run_all_specialists = False
+ 
+    # Try to parse triage JSON robustly
+    if triage_response:
+        try:
+            triage_obj = json.loads(triage_response)
+        except Exception:
+            # Try to extract JSON substring if extra text is present
+            m = re.search(r'(\{.*\})', str(triage_response), re.S)
+            if m:
+                try:
+                    triage_obj = json.loads(m.group(1))
+                except Exception:
+                    triage_obj = None
+            else:
+                triage_obj = None
+        if isinstance(triage_obj, dict):
+            def get_weight(key):
+                try:
+                    v = triage_obj.get(key, {}).get("weight")
+                    return int(v)
+                except Exception:
+                    # fallback: try to parse numbers from strings
+                    try:
+                        return int(re.search(r'(\d+)', str(triage_obj.get(key, {}))).group(1))
+                    except Exception:
+                        return None
+ 
+            cardio_w = get_weight("Cardiology")
+            psych_w  = get_weight("Psychology")
+            pulmon_w = get_weight("Pulmonology")
+ 
+            threshold = int(os.getenv("TRIAGE_THRESHOLD", "3"))
+            if cardio_w is not None and cardio_w >= threshold:
+                selected_specialties["Cardiology"] = True
+            if psych_w is not None and psych_w >= threshold:
+                selected_specialties["Psychology"] = True
+            if pulmon_w is not None and pulmon_w >= threshold:
+                selected_specialties["Pulmonology"] = True
+            # If none selected (e.g., low scores), still run all as fallback
+            if not any(selected_specialties.values()):
+                run_all_specialists = True
+        else:
+            run_all_specialists = True
+    else:
+        run_all_specialists = True
+ 
+    # 2) Instantiate chosen specialist agents
+    agents = {}
+    if run_all_specialists or selected_specialties.get("Cardiology"):
+        agents["Cardiologist"] = SeniorCardiologist(medical_report)
+    if run_all_specialists or selected_specialties.get("Psychology"):
+        agents["Psychologist"] = SeniorPsychologist(medical_report)
+    if run_all_specialists or selected_specialties.get("Pulmonology"):
+        agents["Pulmonologist"] = SeniorPulmonologist(medical_report)
+ 
+    # Save triage response in the responses dict for traceability
+    responses = {"Triage": triage_response}
+ 
+    # Run specialist agents in parallel and collect outputs
     def get_response(agent_name, agent):
         return agent_name, agent.run()
-
-    responses = {}
-    with ThreadPoolExecutor(max_workers=len(agents)) as executor:
+ 
+    with ThreadPoolExecutor(max_workers=max(1, len(agents))) as executor:
         futures = {executor.submit(get_response, name, ag): name for name, ag in agents.items()}
         for fut in as_completed(futures):
             name, resp = fut.result()
             responses[name] = resp
-
-    # Agente de equipa multidisciplinar (igual ao teu fluxo)
-    team_agent = MultidisciplinaryTeam(
-        cardiologist_report  = responses["Cardiologist"],
-        psychologist_report  = responses["Psychologist"],
-        pulmonologist_report = responses["Pulmonologist"],
-    )
-    final_diagnosis3 = team_agent.run()
-
-    # Guarda TXT e JSON com timestamp + nome do paciente
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    base_name = f"{patient_name}_diagnosis{ts}"
-    txt_output = RESULTS_DIR / f"{base_name}.txt"
-    json_output = RESULTS_DIR / f"{base_name}.json"
-
-    txt_output.write_text(
-        "### Final Diagnosis\n\n" + str(final_diagnosis3),
-        encoding="utf-8"
-    )
-
-    payload = {
-        "patient_name": patient_name,
-        "timestamp": ts,
-        "agents": responses,
-        "final_diagnosis": final_diagnosis3,
-        "meta": {
-            "model": os.getenv("OPENROUTER_MODEL", ""),
-            "source_file": path.name,
-        },
-    }
-    json_output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    print(f"✔ {path.name} → guardado:\n   - {txt_output.name}\n   - {json_output.name}")
+ 
+        # Agente de equipa multidisciplinar (igual ao teu fluxo)
+        team_agent = MultidisciplinaryTeam(
+            cardiologist_report  = responses.get("Cardiologist"),
+            psychologist_report  = responses.get("Psychologist"),
+            pulmonologist_report = responses.get("Pulmonologist"),
+        )
+        final_diagnosis3 = team_agent.run()
+ 
+        # Guarda TXT e JSON com timestamp + nome do paciente
+        ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+        base_name = f"{patient_name}_diagnosis{ts}"
+        txt_output = RESULTS_DIR / f"{base_name}.txt"
+        json_output = RESULTS_DIR / f"{base_name}.json"
+    
+        txt_output.write_text(
+            "### Final Diagnosis\n\n" + str(final_diagnosis3),
+            encoding="utf-8"
+        )
+    
+        payload = {
+            "patient_name": patient_name,
+            "timestamp": ts,
+            "agents": responses,
+            "final_diagnosis": final_diagnosis3,
+            "meta": {
+                "model": os.getenv("OPENROUTER_MODEL", ""),
+                "source_file": path.name,
+            },
+        }
+        json_output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    
+        print(f"✔ {path.name} → guardado:\n   - {txt_output.name}\n   - {json_output.name}")
 
 def process_all_reports():
     files = sorted(p for p in REPORTS_DIR.glob("*.txt") if p.is_file())
@@ -111,4 +172,5 @@ def process_all_reports():
             print(f"✖ Erro em {p.name}: {e}")
 
 if __name__ == "__main__":
-    process_all_reports()
+    run_single_report(Path("Medical Reports/Medical Report - Anna Thompson - Irritable Bowel Syndrome.txt"))
+    # process_all_reports()
