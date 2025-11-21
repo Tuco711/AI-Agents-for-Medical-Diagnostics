@@ -1,0 +1,10 @@
+### Final Diagnosis
+
+- **Rheumatoid arthritis (systemic inflammatory disease)**
+  - *Reason:* Pull‑through of the cardiologist’s table: positive RF, anti‑CCP, joint space narrowing and erosive changes all align with classic RA.  The joint symptoms (morning stiffness, swelling, pain) are fully attributable to this process, and uncontrolled inflammation is also a known driver of accelerated atherosclerosis and other extra‑articular complications.
+
+- **Depression or generalized anxiety (psychological distress secondary to chronic illness)**
+  - *Reason:* The psychologist’s report flags low mood, loss of interest, sleep disturbance, and chronic pain‑related stress—classic depressive and anxiety symptoms that often arise in patients battling a long‑standing autoimmune disorder.  These mood disturbances can worsen pain perception and adherence to treatment.
+
+- **Early/mild interstitial lung involvement (pulmonary complication of RA)**
+  - *Reason:* The pulmonologist highlights that RA, especially RF/anti‑CCP‑positive erosive disease, carries a risk of silent pulmonary disease (ground‑glass opacities, reduced DLCO, cough).  Subclinical ILD or pulmonary fibrosis can develop with minimal symptoms, so it is a possible, even if unconfirmed, health issue that warrants baseline PFTs and imaging.

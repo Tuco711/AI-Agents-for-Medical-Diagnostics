@@ -1,0 +1,21 @@
+### Final Diagnosis
+
+```python
+[
+    {
+        "diagnosis": "Irritable Bowel Syndrome (Functional Gastrointestinal Disorder)",
+        "confidence_level": "High",
+        "synthesis_reasoning": "Psychology finds Rome IV‑compatible symptoms (abdominal pain, bloating, altered stool) with no organic pathology on labs or endoscopy. Cardiology and Pulmonology data (not detailed but presumed normal) contain no evidence of myocardial ischemia or pulmonary disease that could explain the GI complaints, supporting a primary functional disorder."
+    },
+    {
+        "diagnosis": "Somatic Symptom Disorder (with predominant abdominal pain)",
+        "confidence_level": "Medium",
+        "synthesis_reasoning": "Psychology highlights somatization, catastrophic misinterpretation of benign sensations, and excessive health‑related reassurance seeking. Despite normal cardiac and pulmonary work‑up, recurrent GI symptom focus and the pattern of symptom amplification fit the DSM‑5 criteria for Somatic Symptom Disorder."
+    },
+    {
+        "diagnosis": "Functional Abdominal Pain Disorder (overlap with IBS)",
+        "confidence_level": "Low",
+        "synthesis_reasoning": "Psychology notes functional abdominal pain that may dominate over classic IBS criteria, yet cardiac and pulmonary evaluations do not reveal any cause. This diagnosis is considered a subtype of the functional GI spectrum and is kept as a low‑confidence possibility when distinguishing from purely IBS‑type presentations."
+    }
+]
+```

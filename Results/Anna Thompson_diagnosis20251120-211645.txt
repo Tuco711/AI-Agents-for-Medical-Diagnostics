@@ -1,0 +1,21 @@
+### Final Diagnosis
+
+```python
+[
+    {
+        "diagnosis": "Functional Gastrointestinal Disorder (IBS‑type/Functional Abdominal Pain)",
+        "confidence_level": "High",
+        "synthesis_reasoning": "Psychologist’s report identifies chronic bloating, altered bowel habits, and cramping with normal imaging and inflammatory markers – classic criteria for a FGID. Cardiology findings (normal ECG, no arrhythmia) and the lack of pulmonary complaints rule out cardiac or respiratory etiologies that could mimic abdominal pain, reinforcing a functional origin."
+    },
+    {
+        "diagnosis": "Somatic Symptom Disorder (Somatization)",
+        "confidence_level": "High",
+        "synthesis_reasoning": "Psychology notes persistent somatic complaints (>6 months), intense fear of underlying disease, frequent reassurance-seeking and cognitive distortions (catastrophizing). Cardiovascular examination is normal and Pulmonology confirms no respiratory pathology, indicating that symptoms are not explained by an organic disease—key for SS per DSM‑5."
+    },
+    {
+        "diagnosis": "Generalized Anxiety Disorder (with visceral focus)",
+        "confidence_level": "Medium",
+        "synthesis_reasoning": "Psychologist reports hyper‑vigilance to internal states and emotional avoidance, which are features of anxiety. Although Cardiology and Pulmonology find no organic cause, the psychological profile suggests an anxiety disorder driving somatic symptoms. The “medium” confidence reflects that full DSM‑5 criteria (worry extending beyond GI issues) were not fully documented, but the pattern strongly points to an anxiety component."
+    }
+]
+```
