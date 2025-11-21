@@ -1,0 +1,21 @@
+### Final Diagnosis
+
+```python
+[
+    {
+        "diagnosis": "Polycystic Ovary Syndrome (PCOS)",
+        "confidence_level": "High",
+        "synthesis_reasoning": "The cardiology report presents classic endocrine findings (elevated LH/FSH ratio, hyperandrogenemia, ovarian cystic morphology) that satisfy the Rotterdam criteria for PCOS, and these are the primary mechanism behind the patient's physical symptoms.  No cardiopulmonary abnormality is identified, so the endocrine pathology remains the dominant diagnosis."
+    },
+    {
+        "diagnosis": "Generalized Anxiety Disorder (GAD)",
+        "confidence_level": "Medium",
+        "synthesis_reasoning": "Psychology reports pervasive shame, perfectionism, intolerance of uncertainty, and catastrophizing that align with DSM‑5 criteria for GAD, particularly given the chronic stress of continuous hormonal fluctuations.  While objective anxiety scales are not yet documented, the psychodynamic analysis strongly suggests anxiety that is likely perpetuating mood dysregulation."
+    },
+    {
+        "diagnosis": "Obstructive Sleep Apnea (OSA) – screening indicated",
+        "confidence_level": "Low",
+        "synthesis_reasoning": "Pulmonology notes the patient’s BMI of 27.4 and absence of pulmonary findings but highlights that PCOS and obesity are known risk factors for OSA.  No overt respiratory symptoms are reported; therefore, OSA is a potential co‑condition that has yet to be confirmed and warrants sleep studies."
+    }
+]
+```

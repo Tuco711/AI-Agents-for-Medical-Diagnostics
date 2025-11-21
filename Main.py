@@ -5,6 +5,7 @@ from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
+from FileChooser import select_file
 
 from Utils.Agents import (
     TriageBalancer,
@@ -51,7 +52,15 @@ def extract_patient_name_from_filename(path: Path) -> str:
         return sanitize_filename(parts[1])
     return sanitize_filename(path.stem)
 
-def run_single_report(path: Path):
+def run_single_report(path: Path | None = None):
+    # Se não foi fornecido path, abre o FileChooser para o utilizador selecionar
+    if path is None:
+        selecionado = select_file()
+        if not selecionado:
+            print("Nenhum ficheiro selecionado. A cancelar.")
+            return
+        path = Path(selecionado)
+
     # Lê o relatório
     medical_report = path.read_text(encoding="utf-8", errors="ignore")
     patient_name   = extract_patient_name_from_filename(path)
@@ -109,15 +118,23 @@ def run_single_report(path: Path):
  
     # 2) Instantiate chosen specialist agents
     agents = {}
-    if run_all_specialists or selected_specialties.get("Cardiology"):
+
+
+    #* If all specialists are to be run, instantiate just senior agents due to resource constraints
+    if run_all_specialists:
         agents["Senior_Cardiologist"] = SeniorCardiologist(medical_report)
-        agents["Novice_Cardiologist"] = NoviceCardiologist(medical_report)
-    if run_all_specialists or selected_specialties.get("Psychology"):
         agents["Senior_Psychologist"] = SeniorPsychologist(medical_report)
-        agents["Novice_Psychologist"] = NovicePsychologist(medical_report)
-    if run_all_specialists or selected_specialties.get("Pulmonology"):
         agents["Senior_Pulmonologist"] = SeniorPulmonologist(medical_report)
-        agents["Novice_Pulmonologist"] = NovicePulmonologist(medical_report)
+    else:
+        if selected_specialties.get("Cardiology"):
+            agents["Senior_Cardiologist"] = SeniorCardiologist(medical_report)
+            agents["Novice_Cardiologist"] = NoviceCardiologist(medical_report)
+        if selected_specialties.get("Psychology"):
+            agents["Senior_Psychologist"] = SeniorPsychologist(medical_report)
+            agents["Novice_Psychologist"] = NovicePsychologist(medical_report)
+        if selected_specialties.get("Pulmonology"):
+            agents["Senior_Pulmonologist"] = SeniorPulmonologist(medical_report)
+            agents["Novice_Pulmonologist"] = NovicePulmonologist(medical_report)
  
     # Save triage response in the responses dict for traceability
     responses = {"Triage": triage_response}
@@ -178,5 +195,6 @@ def process_all_reports():
             print(f"✖ Erro em {p.name}: {e}")
 
 if __name__ == "__main__":
-    run_single_report(Path("Medical Reports/Medical Report - Anna Thompson - Irritable Bowel Syndrome.txt"))
+    # Abre o seletor para escolher um ficheiro quando executar diretamente
+    run_single_report()
     # process_all_reports()
