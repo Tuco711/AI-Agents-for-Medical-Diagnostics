@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Major Neurocognitive Disorder, Mixed Etiology (Alzheimer's Disease and Vascular Dementia)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Both Cardiology and Psychology reports converge on a primary neurocognitive disorder. Psychology's 'Primary Diagnosis' is 'Major Neurocognitive Disorder, likely due to Alzheimer's Disease,' supported by the progressive course, MRI showing cortical atrophy (especially temporal lobes), MMSE score of 19/30, and family history of dementia. Crucially, both specialists also identify a significant vascular component: Psychology lists 'Vascular Neurocognitive Disorder' as a strong consideration given the patient's history of hypertension and hyperlipidemia. Cardiology explicitly suspects 'Vascular Dementia Component / Cerebrovascular Disease' due to these risk factors and notes suboptimal blood pressure control (BP 135/82 mmHg). This combined evidence strongly points to a mixed dementia picture, where both neurodegenerative and cerebrovascular pathologies contribute to the cognitive decline."
+  },
+  {
+    "diagnosis": "Unaddressed Cardiovascular Contributions to Cognitive Impairment",
+    "confidence_level": "High",
+    "synthesis_reasoning": "While a neurodegenerative process is evident, Cardiology highlights critical, unaddressed cardiovascular factors that could be exacerbating or causing a component of the cognitive decline. The report emphasizes the absence of a comprehensive cardiovascular workup and lists 'Occult Atrial Fibrillation or other significant arrhythmia' and 'Undiagnosed Structural Heart Disease (e.g., Aortic Stenosis, Diastolic Dysfunction)' as suspected etiologies. These conditions can lead to cerebral hypoperfusion or embolic strokes, directly impacting cognition. Cardiology's recommendations for an Echocardiogram, extended cardiac rhythm monitoring, and carotid duplex ultrasound are crucial to identify these treatable or manageable factors, which are currently ambiguous but highly probable contributors given the patient's age and risk profile (hypertension, hyperlipidemia, suboptimal BP control)."
+  },
+  {
+    "diagnosis": "Secondary Psychological Distress and Need for Supportive Care in Dementia",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Psychology's 'Case Conceptualization' thoroughly addresses the profound psychological impact of a progressive neurocognitive disorder, even while ruling out primary psychological disorders (Anxiety, Depression, PTSD) as the cause of the cognitive decline. The report states Mr. Wilson is 'likely grappling with a profound sense of loss' and that this can manifest as 'secondary emotional dysregulation, such as anxiety, frustration, irritability, or withdrawal.' This underscores that while the cognitive decline is physiological, the patient's emotional well-being and adaptation to his condition are significant health issues requiring 'Supportive Psychotherapy,' 'Caregiver Support and Education,' and a 'Trauma-Informed Lens' to manage the psychological consequences of the disease."
+  }
+]

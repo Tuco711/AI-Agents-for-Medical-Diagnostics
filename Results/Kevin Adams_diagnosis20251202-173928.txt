@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Chronic Self-Neglect and Maladaptive Coping Manifesting as Poorly Controlled Chronic Diseases (Diabetes, Hypertension, Obesity)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology report details 'long-standing, poorly controlled type 2 diabetes (HbA1c 8.7%), compounded by significant cardiovascular risk factors including active smoking, obesity (BMI 31.4), and uncontrolled Stage 1 hypertension (BP 142/88 mmHg).' The persistence and severity of these unmanaged conditions, despite their life-threatening implications, are directly addressed by the Psychology report. The psychologist's 'Case Conceptualization' interprets these lifestyle choices not merely as 'bad habits' but as a 'deeply entrenched pattern of chronic self-neglect and maladaptive coping,' potentially rooted in 'denial and avoidance as primary defense mechanisms' and a 'pervasive difficulty with self-care.' This psychological framework explains *why* the physiological conditions are so poorly controlled, linking the medical non-adherence to underlying emotional distress and coping deficits, even in the absence of patient-reported psychological symptoms."
+  },
+  {
+    "diagnosis": "Advanced Diabetic Complications and High-Risk Atherosclerotic Cardiovascular Disease (ASCVD) with Probable Subclinical Organ Damage",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Cardiology explicitly states 'very high cumulative cardiovascular risk' with 'established microvascular complications (peripheral neuropathy, early renal impairment)' and a 'high likelihood of concurrent macrovascular disease.' Suspected etiologies include 'Accelerated Atherosclerotic Cardiovascular Disease (ASCVD),' 'Diabetic Cardiomyopathy / HFpEF,' and 'Diabetic Autonomic Neuropathy (DAN).' The report highlights the 'critical constellation of uncontrolled and severe cardiovascular risk factors' (poorly controlled diabetes, active smoking, uncontrolled HTN, obesity). Pulmonology reinforces this by noting that 'poorly controlled diabetes, hypertension, and obesity significantly increase the risk for cardiovascular disease,' leading to concerns about 'Pulmonary Hypertension secondary to Left Heart Disease.' The chief complaint of burning feet is a direct manifestation of diabetic neuropathy, a confirmed microvascular complication."
+  },
+  {
+    "diagnosis": "High Risk for Undiagnosed Chronic Pulmonary Disease (COPD, Obesity-Related Lung Disease, OSA) Secondary to Smoking and Obesity",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Pulmonology identifies the patient's active smoking history and obesity (BMI 31.4) as 'significant risk factors for chronic lung disease.' Specifically, 'Chronic Obstructive Pulmonary Disease (COPD)' is deemed 'highly probable given the smoking history,' and 'Obesity-related Lung Disease' (including restrictive ventilatory defect and potential for Obstructive Sleep Apnea (OSA) or Obesity Hypoventilation Syndrome (OHS)) is a primary suspected pathology. While no respiratory symptoms are reported, Pulmonology emphasizes that 'the absence of dyspnea as a chief complaint does not rule out subclinical lung or cardiac issues' and recommends a comprehensive pulmonary workup (PFTs, HRCT, sleep study). The psychological findings of chronic self-neglect provide context for the patient's continued smoking and obesity, which directly contribute to this significant pulmonary risk."
+  }
+]

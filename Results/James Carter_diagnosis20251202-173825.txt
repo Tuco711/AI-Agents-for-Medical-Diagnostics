@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Generalized Anxiety Disorder (GAD) with Comorbid Insomnia Disorder",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Psychology report provides a robust case conceptualization, linking the patient's 'high-stress occupation' to sustained sympathetic nervous system activation, maladaptive coping, and chronic hyperarousal, which directly manifests as chronic insomnia and daytime fatigue. It strongly suspects GAD as the primary diagnosis, noting key symptoms (fatigue, sleep disturbance) and contextual factors (family history of maternal depression). The Cardiology report independently identifies 'high stress occupation' and 'high caffeine intake' as significant factors and includes 'Stress-Related Cardiac Manifestations/Anxiety' as a suspected etiology for the nocturnal awakenings and fatigue. This convergence of findings from both specialists strongly suggests that chronic psychological distress and anxiety are central to the patient's presentation, explaining the sleep disturbance and potentially contributing to or exacerbating any perceived cardiac symptoms. The prior sleep study ruling out apnea further supports a non-primary sleep disorder origin for the insomnia."
+  },
+  {
+    "diagnosis": "Chronic Insomnia",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Chronic insomnia, characterized by 'difficulty initiating and maintaining sleep' and 'daytime fatigue,' is the chief complaint explicitly highlighted in both the Cardiology and Psychology reports, persisting for a year. The Cardiology report notes the sleep study confirmed 'decreased sleep efficiency' and ruled out sleep apnea, making other causes for awakenings more plausible. The Psychology report details the mechanisms of insomnia, such as difficulty downregulating and hyperarousal, and recommends Cognitive Behavioral Therapy for Insomnia (CBT-I) as a first-line treatment. This diagnosis represents the core, undeniable symptom that both specialists are attempting to explain, with strong evidence from both reports confirming its presence and impact."
+  },
+  {
+    "diagnosis": "Potential Undiagnosed Cardiovascular Condition (e.g., Paroxysmal Arrhythmias, Early Diastolic Dysfunction)",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "While psychological factors are prominent, the Cardiology report raises critical concerns about potential underlying physiological cardiac issues that have not yet been fully investigated. It explicitly lists 'Paroxysmal Nocturnal Arrhythmias' and 'Early Diastolic Dysfunction/Hypertensive Heart Disease' as suspected etiologies for the nocturnal awakenings and fatigue. This suspicion is based on the patient's cardiovascular risk factors (controlled hypertension, borderline overweight BMI, high caffeine intake, stress) and the absence of a comprehensive cardiac evaluation (ECG, Echocardiogram, extended monitoring). The cardiologist's recommendations for these diagnostic tests are crucial to rule out or confirm these conditions. Even if anxiety is a major contributor, it is vital to ensure no concurrent or primary cardiac pathology is overlooked, as psychological stress and caffeine could also exacerbate or trigger such conditions."
+  }
+]

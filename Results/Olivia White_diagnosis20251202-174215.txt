@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Recurrent Group A Streptococcal Pharyngitis with High Risk for Acute Rheumatic Fever (ARF) / Rheumatic Heart Disease (RHD)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology report identifies the patient's year-long history of recurrent Group A Streptococcus (GAS) infections as a 'critical red flag' and 'significant concern' for the development of Acute Rheumatic Fever and subsequent Rheumatic Heart Disease. This is a direct physiological risk stemming from the confirmed infection. The Pulmonology report corroborates the presence of streptococcal tonsillitis. While the psychological report acknowledges the primary medical diagnosis, the cardiac specialist's findings highlight the immediate and severe physiological sequelae that must be investigated as a priority, directly linking the confirmed recurrent infection to a high-risk cardiac concern."
+  },
+  {
+    "diagnosis": "Psychosomatic Manifestation / Somatic Symptom Disorder (pending further psychological assessment)",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "The Psychology report strongly hypothesizes that the recurrent nature of Olivia's physical complaints (recurrent strep, sore throat, difficulty swallowing) may serve as a 'somatic canvas' for unexpressed emotions or chronic psychological distress, potentially compromising her immune system. They list 'Undifferentiated Somatic Symptoms/Psychosomatic Manifestation' and 'Somatic Symptom Disorder' as strong contenders, suggesting that the recurrence itself could be driven by psychological factors. The Pulmonology report rules out any pulmonary involvement, and if the Cardiology workup is negative for primary cardiac disease, the psychological perspective becomes crucial in understanding the persistent recurrence of symptoms and their associated distress."
+  },
+  {
+    "diagnosis": "Chronic Stress and Emotional Dysregulation contributing to Immune Vulnerability",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "The Psychology report posits that 'chronic, unacknowledged psychological stressors or emotional dysregulation' may compromise the immune system, increasing susceptibility to recurrent infections. This provides a plausible underlying mechanism for the *recurrence* of Group A Streptococcus infections, which is the central medical issue identified by both Cardiology and Pulmonology. This psychological hypothesis connects the recurrent physiological problem to underlying mental health factors, suggesting a mixed (psychosomatic) etiology where psychological distress contributes to the physical vulnerability, thereby explaining the ambiguity of the persistent infections beyond purely anatomical or environmental exposures."
+  }
+]

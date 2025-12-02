@@ -18,6 +18,7 @@ from Utils.Agents import (
     SeniorPulmonologist,
     NovicePulmonologist,
     MultidisciplinaryTeam,
+    evaluate_with_gemini,
 )
 
 # =========================
@@ -144,6 +145,7 @@ def run_single_report(path: Path | None = None):
  
     # Save triage response in the responses dict for traceability
     responses = {"Triage": triage_response}
+    metrics = {}
  
     # Run specialist agents in parallel and collect outputs
     def get_response(agent_name, agent):
@@ -154,7 +156,11 @@ def run_single_report(path: Path | None = None):
         for fut in as_completed(futures):
             name, resp = fut.result()
             responses[name] = resp
- 
+
+            # Avaliação automática da resposta (exceto triagem)
+            if name != "Triage" and resp:
+                metrics[name] = evaluate_with_gemini(medical_report, name, resp)
+            
         # Agente de equipa multidisciplinar (igual ao teu fluxo)
         team_agent = MultidisciplinaryTeam(
             cardiologist_report  = responses.get("Senior_Cardiologist", "") + responses.get("Novice_Cardiologist", ""),
@@ -180,6 +186,7 @@ def run_single_report(path: Path | None = None):
             "timestamp": ts,
             "agents": responses,
             "final_diagnosis": final_diagnosis3,
+            "metrics": metrics,
             "meta": {
                 "model": os.getenv("OPENROUTER_MODEL", ""),
                 "source_file": path.name,

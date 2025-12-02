@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Panic Disorder",
+    "confidence_level": "High",
+    "synthesis_reasoning": "All three specialists converge on Panic Disorder as the primary explanation for the patient's acute, recurrent episodes. Cardiology notes the 'classic for panic attacks' presentation and the 'extensive negative cardiac workup strongly points towards a non-cardiac etiology.' Psychology explicitly diagnoses 'Panic Disorder (F41.0)' meeting all DSM-5 criteria, explaining the symptoms as a 'catastrophic misinterpretation of normal or benign physiological sensations' under chronic stress. Pulmonology states 'the most probable diagnosis for the acute episodes is Panic Disorder,' confirming no primary pulmonary pathology for the shortness of breath. The normal cardiac (ECG, Holter, Echo) and respiratory (clear breath sounds) findings from Cardiology and Pulmonology, respectively, are directly explained by the psychological mechanism of panic attacks."
+  },
+  {
+    "diagnosis": "Generalized Anxiety Disorder (GAD) / Underlying Anxiety Vulnerability",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The patient's current panic disorder is built upon a pre-existing and well-documented anxiety vulnerability. Psychology's case conceptualization highlights 'Panic Disorder, superimposed on a pre-existing anxiety vulnerability (diagnosed GAD, family history of GAD).' Cardiology notes a 'history of anxiety, managed with CBT and PRN benzodiazepines.' Pulmonology also acknowledges the 'patient's known history of generalized anxiety disorder.' This indicates GAD is a significant underlying trait contributing to the patient's overall anxious state and susceptibility to panic attacks, providing context for the development and persistence of panic symptoms."
+  },
+  {
+    "diagnosis": "Gastroesophageal Reflux Disease (GERD) as a contributing factor",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "While not the primary cause of the panic attacks, GERD is identified as a comorbidity that can mimic chest pain and exacerbate the panic cycle. Cardiology states, 'His GERD is a co-morbidity that can sometimes mimic chest pain, but the full constellation of symptoms points beyond this.' Psychology further elaborates, describing GERD as 'a physical comorbidity that can mimic cardiac symptoms and be exacerbated by anxiety, creating a feedback loop for panic.' This suggests that GERD-related discomfort could be one of the 'benign physiological sensations' that the patient catastrophically misinterprets, fueling the panic attacks despite a normal cardiac workup."
+  }
+]

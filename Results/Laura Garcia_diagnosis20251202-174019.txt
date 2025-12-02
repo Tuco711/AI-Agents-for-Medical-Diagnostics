@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Rheumatoid Arthritis (RA) with High Risk for Systemic Complications",
+    "confidence_level": "High",
+    "synthesis_reasoning": "All three specialists independently confirm the diagnosis of Rheumatoid Arthritis based on the provided clinical symptoms (chronic joint stiffness and pain, MCP swelling/tenderness), objective findings (positive RF, elevated Anti-CCP, joint space narrowing). Crucially, each specialist then highlights the systemic nature of RA: the Cardiologist notes its link to increased cardiovascular risk (accelerated atherosclerosis, pericardial disease), and the Pulmonologist emphasizes its association with pulmonary manifestations, particularly Interstitial Lung Disease (ILD). This unified perspective underscores that RA is a widespread inflammatory disease with implications far beyond the joints."
+  },
+  {
+    "diagnosis": "Subclinical Cardiovascular and Pulmonary Involvement Secondary to RA",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Both the Cardiologist and Pulmonologist recommend extensive proactive screening for organ involvement, even in the absence of overt symptoms in their respective domains. The Cardiologist recommends a baseline Echocardiogram, ECG, and comprehensive cardiovascular risk assessment to evaluate for subclinical pericardial effusion, valvular abnormalities, ventricular dysfunction, and arrhythmias, all common in RA. Similarly, the Pulmonologist recommends Pulmonary Function Tests (PFTs) and High-Resolution CT (HRCT) of the Chest to screen for Interstitial Lung Disease (RA-ILD), pleural disease, or airway involvement. The shared recommendation for an Echocardiogram by both specialists (Cardiology for direct cardiac assessment, Pulmonology to assess for pulmonary hypertension or cardiac dysfunction secondary to lung disease) further triangulates the high suspicion for interconnected subclinical cardiorespiratory complications."
+  },
+  {
+    "diagnosis": "Significant Risk for Psychological Distress and Adjustment Issues Related to Chronic Illness",
+    "confidence_level": "High",
+    "synthesis_reasoning": "While the Psychologist's report explicitly states a lack of psychological data to make a definitive diagnosis, it strongly conceptualizes the inherent psychological challenges associated with a new diagnosis of a chronic, debilitating illness like RA. The report outlines critical dimensions for assessment, including the subjective experience of illness, emotional impact (e.g., depression, anxiety), and coping mechanisms. It hypothetically lists Adjustment Disorder, Major Depressive Disorder, and Generalized Anxiety Disorder as primary considerations, and suggests therapeutic pathways like CBT for chronic pain. This indicates a high probability that the patient will experience significant psychological distress or require support for adjustment to their chronic condition, even if not yet reported as a chief complaint, making it a critical area for future assessment and intervention."
+  }
+]

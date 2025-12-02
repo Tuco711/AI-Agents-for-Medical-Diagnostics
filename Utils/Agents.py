@@ -459,3 +459,79 @@ class MultidisciplinaryTeam(Agent):
             "general_practitioner_report": general_practitioner_report
         }
         super().__init__(role="MultidisciplinaryTeam", extra_info=extra_info)
+
+def evaluate_with_gemini(medical_report: str, agent_name: str, agent_output: str) -> dict:
+    """
+    Usa Gemini (google.genai) como 'juiz' para avaliar a qualidade da resposta de um agente.
+    Devolve um dicionário com: score (0-100), rating (poor/fair/good/excellent) e explanation.
+    """
+
+    api_key = os.getenv("GENAI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    if not api_key:
+        # Sem chave, devolvemos uma métrica neutra para não partir o fluxo
+        return {
+            "score": 0,
+            "rating": "unknown",
+            "explanation": "No Gemini API key configured (GENAI_API_KEY / GOOGLE_API_KEY)."
+        }
+
+    client = genai.Client(api_key=api_key)
+
+    eval_prompt = f"""
+    You are a senior medical quality reviewer.
+
+    You will be given:
+    1) A patient medical report (may be synthetic or incomplete).
+    2) The name of an AI agent (its role).
+    3) The agent's answer.
+
+    Your task is to rate the QUALITY of the agent's answer ONLY in terms of:
+    - Clinical coherence and plausibility (not perfect factual accuracy).
+    - Internal consistency (no contradictions).
+    - Clarity and usefulness of the reasoning for a human clinician.
+    - Adherence to the requested format (headings, JSON, etc., when applicable).
+
+    Ignore minor language or grammar issues. Focus on whether this answer would be
+    helpful and reasonably safe as a draft for a human clinician to review.
+
+    Return ONLY a valid JSON object with the following fields:
+    - "score": integer between 0 and 100 (0 = unusable, 100 = excellent).
+    - "rating": one of ["poor", "fair", "good", "excellent"].
+    - "explanation": short text (max 5 sentences) justifying the score.
+
+    --- PATIENT REPORT ---
+    {medical_report}
+
+    --- AGENT NAME ---
+    {agent_name}
+
+    --- AGENT OUTPUT ---
+    {agent_output}
+    """
+
+    try:
+        response = client.models.generate_content(
+            model=os.getenv("GEMINI_EVAL_MODEL", "gemini-2.0-flash"),
+            contents=eval_prompt,
+        )
+        raw = response.text or ""
+
+        # tentar extrair um JSON de forma robusta
+        try:
+            m = re.search(r'(\{.*\})', raw, re.S)
+            if m:
+                return json.loads(m.group(1))
+            return json.loads(raw)
+        except Exception:
+            return {
+                "score": 0,
+                "rating": "parse_error",
+                "explanation": f"Could not parse evaluation JSON. Raw output (truncated): {raw[:300]}"
+            }
+
+    except Exception as e:
+        return {
+            "score": 0,
+            "rating": "error",
+            "explanation": f"Error calling Gemini evaluator: {e}"
+        }

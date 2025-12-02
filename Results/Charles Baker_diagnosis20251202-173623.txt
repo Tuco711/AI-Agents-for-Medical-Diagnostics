@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Uncontrolled Stage 1 Hypertension with increased Cardiovascular Risk",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology report consistently identifies Mr. Baker's blood pressure at 140/86 mmHg, classifying it as Stage 1 Hypertension despite daily Hydrochlorothiazide. The report notes his overweight status (BMI 27.9) and history of hypertension as contributing factors, increasing his long-term risk for cardiac events. Recommendations include optimizing his antihypertensive regimen and lifestyle modifications."
+  },
+  {
+    "diagnosis": "Highly Suspect Prostate Cancer / Significant Benign Prostatic Hyperplasia (BPH)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology resident's report, while focused on cardiovascular health, highlights critical urological findings: a significantly elevated PSA of 9.5 ng/mL, an enlarged and firm prostate with nodules on ultrasound and rectal exam, and classic lower urinary tract symptoms (LUTS) including nocturia, difficulty urinating, and weak stream. The family history of prostate cancer further elevates suspicion. The report explicitly flags these as 'significant red flags for potential prostate cancer, requiring urgent urological follow-up.'"
+  },
+  {
+    "diagnosis": "Potential Electrolyte Imbalance secondary to Hydrochlorothiazide use",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "The Cardiology report explicitly lists 'Electrolyte Imbalance Secondary to Hydrochlorothiazide' as a suspected etiology, noting that thiazide diuretics are known to cause disturbances like hypokalemia and hyponatremia. The report recommends ordering a Comprehensive Metabolic Panel (CMP) to assess electrolytes and renal function, indicating a proactive concern for this common medication side effect."
+  }
+]

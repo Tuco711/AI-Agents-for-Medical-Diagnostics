@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Polycystic Ovary Syndrome (PCOS) with Elevated Long-Term Cardiovascular and Metabolic Risk",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Cardiology explicitly diagnoses PCOS based on 'irregular menses, hirsutism, elevated LH/FSH ratio, elevated testosterone, and characteristic ovarian ultrasound findings.' It further highlights PCOS as a 'well-recognized independent risk factor for developing metabolic syndrome, insulin resistance, dyslipidemia, hypertension, and premature atherosclerosis.' The patient's BMI of 27.4, sedentary lifestyle, and high-carbohydrate diet are noted as significant contributors to this risk. Psychology's case conceptualization also acknowledges PCOS as the 'primary medical diagnosis' and the source of the physical manifestations, reinforcing its central role."
+  },
+  {
+    "diagnosis": "Early-Stage Metabolic Dysfunction and Insulin Resistance",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Cardiology identifies 'Early-stage metabolic dysfunction/Insulin Resistance' as a highly probable etiology. Despite normal fasting glucose, the specialist reasons that 'the patient's BMI, sedentary lifestyle, high-carbohydrate diet, and underlying PCOS place her at very high risk for insulin resistance.' This is deemed a critical precursor to dyslipidemia, type 2 diabetes, and hypertension. The proposed workup includes an Oral Glucose Tolerance Test (OGTT) and HbA1c to confirm and quantify this risk, underscoring its importance even in the absence of overt diabetes."
+  },
+  {
+    "diagnosis": "Psychological Distress and Maladaptive Behavioral Coping Secondary to PCOS",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "While Psychology Report 2 states 'no psychological symptoms... were reported' by the patient, Psychology Report 1 provides a compelling 'Case Conceptualization' arguing that the 'psychological impact of these symptoms [of PCOS], particularly at this developmental stage, is likely profound.' It suggests the 'sedentary lifestyle' and 'high carbohydrate diet' (also noted by Cardiology as physiological risk factors) 'are not merely lifestyle factors but may represent maladaptive coping mechanisms,' such as emotional eating or social avoidance due to body image concerns. This connects the physiological symptoms of PCOS (hirsutism, acne) to potential psychological distress (body image, self-esteem) and then to behaviors (diet, exercise) that exacerbate the metabolic/cardiovascular risks identified by Cardiology, indicating a psychosomatic link."
+  }
+]
