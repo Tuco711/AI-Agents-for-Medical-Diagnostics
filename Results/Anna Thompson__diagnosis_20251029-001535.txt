@@ -1,7 +1,0 @@
-### Final Diagnosis
-
-- **Functional gastrointestinal disorder (e.g., irritable bowel syndrome)** – The patient’s persistent bloating, altered bowel habits, and cramping pain have no organic explanation after cardiac, pulmonary, and basic laboratory work‑ups; GI‑specific testing is now recommended, fitting the classic presentation of IBS or functional gut syndromes.  
-
-- **Anxiety‑related somatic‑symptom/illness‑anxiety disorder** – The psychologist identified stress‑triggered gastrointestinal sensitivity, chronic worry about health, and a pattern of somatic complaints that heighten in stressful moments; these findings point to a psychogenic component that can amplify GI symptoms.
-
-- **Potential intermittent cardiac arrhythmia (e.g., premature atrial contractions or supraventricular tachycardia)** – Though currently absent on routine examination, the cardiologist’s plan for a baseline ECG and future Holter monitoring reflects a concern that subclinical arrhythmia could transiently alter gut perfusion or motility, producing the abdominal symptoms observed.

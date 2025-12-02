@@ -1,0 +1,21 @@
+### Final Diagnosis
+
+```python
+[
+    {
+        "diagnosis": "Irritable Bowel Syndrome (IBS) – functional gastrointestinal disorder",
+        "confidence_level": "High",
+        "synthesis_reasoning": "The psychologist’s Case Conceptualization notes recurrent abdominal pain, bloating, alternating constipation/diarrhea, and normal structural and laboratory investigations – classic Rome IV features of IBS.  Cardiology reports an unremarkable cardiac evaluation (no arrhythmias, normal ECG), and Pulmonology findings are unremarkable, ruling out cardiac or pulmonary causes of abdominal discomfort."
+    },
+    {
+        "diagnosis": "Somatic Symptom and Related Disorder (SSRD; somatic symptom disorder)",
+        "confidence_level": "High",
+        "synthesis_reasoning": "Psychology identified chronic somatizing behaviors, exaggerated symptom awareness and catastrophizing, and a persistent belief that the abdominal complaints pose a serious health threat despite normal work‑up.  The absence of any organic disease on Cardiology and Pulmonology work‑ups supports the diagnosis of SSRD, wherein the physical symptoms are real but their intensity is amplified by psychological factors."
+    },
+    {
+        "diagnosis": "Generalized Anxiety Disorder (GAD) – pending evaluation",
+        "confidence_level": "Low",
+        "synthesis_reasoning": "While the psychologist noted chronic low‑grade stress and emotional dysregulation, no DSM‑5 criteria for GAD (e.g., ≥6 months of excessive worry coupled with at least three somatic symptoms, such as muscle tension, restlessness, or difficulty concentrating) were met.  Cardiology and Pulmonology findings were normal, indicating no physiological correlate for anxiety‑related symptoms; however, continued monitoring may be warranted if anxiety features emerge."
+    }
+]
+```

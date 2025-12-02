@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 from FileChooser import select_file
 
 from Utils.Agents import (
+    SeniorGeneralPractitioner,
+    NoviceGeneralPractitioner,
     TriageBalancer,
     SeniorCardiologist,
     NoviceCardiologist,
@@ -125,6 +127,7 @@ def run_single_report(path: Path | None = None):
         agents["Senior_Cardiologist"] = SeniorCardiologist(medical_report)
         agents["Senior_Psychologist"] = SeniorPsychologist(medical_report)
         agents["Senior_Pulmonologist"] = SeniorPulmonologist(medical_report)
+        agents["Senior_General_Practitioner"] = SeniorGeneralPractitioner(medical_report)
     else:
         if selected_specialties.get("Cardiology"):
             agents["Senior_Cardiologist"] = SeniorCardiologist(medical_report)
@@ -135,6 +138,9 @@ def run_single_report(path: Path | None = None):
         if selected_specialties.get("Pulmonology"):
             agents["Senior_Pulmonologist"] = SeniorPulmonologist(medical_report)
             agents["Novice_Pulmonologist"] = NovicePulmonologist(medical_report)
+        if selected_specialties.get("General_Practitioner"):
+            agents["Senior_General_Practitioner"] = SeniorGeneralPractitioner(medical_report)
+            agents["Novice_General_Practitioner"] = NoviceGeneralPractitioner(medical_report)
  
     # Save triage response in the responses dict for traceability
     responses = {"Triage": triage_response}
@@ -154,6 +160,7 @@ def run_single_report(path: Path | None = None):
             cardiologist_report  = responses.get("Senior_Cardiologist", "") + responses.get("Novice_Cardiologist", ""),
             psychologist_report  = responses.get("Senior_Psychologist", "") + responses.get("Novice_Psychologist", ""),
             pulmonologist_report = responses.get("Senior_Pulmonologist", "") + responses.get("Novice_Pulmonologist", ""),
+            general_practitioner_report = responses.get("Senior_General_Practitioner", "") + responses.get("Novice_General_Practitioner", ""),
         )
         final_diagnosis3 = team_agent.run()
  
@@ -196,5 +203,5 @@ def process_all_reports():
 
 if __name__ == "__main__":
     # Abre o seletor para escolher um ficheiro quando executar diretamente
-    run_single_report()
-    # process_all_reports()
+    # run_single_report()
+    process_all_reports()

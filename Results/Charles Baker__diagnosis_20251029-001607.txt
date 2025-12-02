@@ -1,8 +1,0 @@
-### Final Diagnosis
-
-- **Benign Prostatic Hyperplasia (BPH)**
-  - The cardiologist’s assessment concluded that the patient’s urinary retention, nocturia, and post‑void residual volume are fully explained by BPH; no cardiac etiology was identified.  
-- **Anxiety and Depressive Symptoms (psychological impact of chronic illness)**
-  - The psychologist identified health‑related anxiety, generalized anxiety, depressive mood, and sleep disturbance directly linked to the patient’s urinary symptoms and the fear of cancer.  
-- **Hypertension (age‑related cardiovascular risk)**
-  - The cardiologist noted the patient’s age (68 years) and history of hypertension, prompting routine cardiovascular screening and baseline risk assessment despite no current cardiac findings.
