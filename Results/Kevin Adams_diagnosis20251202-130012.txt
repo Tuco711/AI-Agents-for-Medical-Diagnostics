@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Severe, Uncontrolled Type 2 Diabetes Mellitus with Established Microvascular Complications and Accelerated Atherosclerotic Cardiovascular Disease Risk",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Cardiology explicitly details 'long-standing, poorly controlled Type 2 Diabetes Mellitus (HbA1c 8.7%)' complicated by 'confirmed peripheral neuropathy and early diabetic nephropathy (mildly reduced eGFR).' It identifies 'Accelerated Atherosclerotic Cardiovascular Disease (ASCVD) with high risk' due to the severe combination of uncontrolled T2DM, uncontrolled hypertension (BP 142/88 mmHg), obesity (BMI 31.4), active smoking, and a sedentary lifestyle. Pulmonology also notes the 'poorly controlled Type 2 Diabetes Mellitus, leading to confirmed peripheral neuropathy and mild renal impairment' as a primary concern, reinforcing the systemic nature of the disease and its confirmed microvascular damage."
+  },
+  {
+    "diagnosis": "High Probability of Undiagnosed Chronic Obstructive Pulmonary Disease (COPD) and Increased Lung Malignancy Risk secondary to Active Smoking",
+    "confidence_level": "Medium-High",
+    "synthesis_reasoning": "Pulmonology identifies the patient's 'active smoking history' as the 'most significant finding' and states 'high suspicion for Chronic Obstructive Pulmonary Disease (COPD)' and 'increased risk for lung malignancy.' While no specific pulmonary symptoms or diagnostic tests (PFTs, imaging) are provided, the long-standing smoking history is a paramount risk factor. Cardiology also lists 'active smoking' as a major cardiovascular risk factor, highlighting its systemic detrimental effects. The absence of reported respiratory symptoms does not rule out early or silent lung disease in a chronic smoker."
+  },
+  {
+    "diagnosis": "Emerging Cardiorenal-Metabolic Syndrome with High Likelihood of Obstructive Sleep Apnea (OSA)",
+    "confidence_level": "Medium-High",
+    "synthesis_reasoning": "Cardiology notes 'uncontrolled hypertension (BP 142/88 mmHg),' 'obesity (BMI 31.4),' and 'Progressive Diabetic Nephropathy with evolving cardiorenal syndrome,' indicating a complex interplay of metabolic and organ dysfunction. Independently, Pulmonology raises concerns for 'Obstructive Sleep Apnea (OSA)' due to the patient's 'obesity and sedentary lifestyle.' This diagnosis unifies the systemic metabolic dysregulation (poorly controlled diabetes, hypertension, obesity) with its impact on cardiac and renal systems (cardiorenal syndrome) and the respiratory system (OSA), a common comorbidity that further exacerbates cardiovascular and metabolic risks."
+  }
+]

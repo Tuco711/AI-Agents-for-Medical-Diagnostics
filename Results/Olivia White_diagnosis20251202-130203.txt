@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Recurrent Group A Streptococcus Pharyngitis with Psychophysiological Component (Somatic Symptom Disorder)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Cardiology confirms the presence of recurrent Group A Streptococcus pharyngitis over the past year. Psychology provides a compelling explanation for the *recurrence* and *chronicity* of these infections, hypothesizing that chronic psychological distress, unresolved trauma, or emotional repression may be manifesting somatically, potentially impacting immune function and contributing to the repeated infections. The specific symptoms (throat, difficulty swallowing) are highlighted as symbolically significant. Pulmonology rules out primary respiratory involvement, thereby focusing attention on the ENT/systemic and psychological factors contributing to the persistent physical symptoms, despite a clear medical etiology for the infection itself."
+  },
+  {
+    "diagnosis": "Acute Rheumatic Fever (ARF) / Rheumatic Heart Disease (RHD) - Rule Out",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "Cardiology raises a significant red flag regarding the potential for Acute Rheumatic Fever (ARF) or Rheumatic Heart Disease (RHD) due to the history of *recurrent* Group A Streptococcus infections. This is a critical physiological sequela that requires immediate and comprehensive cardiac evaluation (ECG, Echocardiogram, inflammatory markers, streptococcal antibody titers) as recommended by Cardiology. While Psychology focuses on the psychophysiological aspects of recurrence and Pulmonology found no primary pulmonary issues, neither specialist negates this serious potential cardiac complication, which remains a high-priority 'rule out' given the patient's history."
+  },
+  {
+    "diagnosis": "Underlying Trauma- and Stressor-Related Disorder / Chronic Emotional Repression",
+    "confidence_level": "Medium",
+    "synthesis_reasoning": "Psychology's case conceptualization strongly suggests that the recurrent physical symptoms, particularly involving the throat and difficulty swallowing, are a manifestation of deeper, unresolved psychological distress. This could stem from an 'Unspecified Trauma- and Stressor-Related Disorder' or 'Generalized Anxiety Disorder,' where issues of voice, expression, or being silenced contribute to chronic emotional repression. This underlying psychological framework provides the root cause for the Somatic Symptom Disorder and the psychophysiological mechanism contributing to the recurrent infections, explaining the 'why' behind the persistent physical complaints that extend beyond a purely infectious etiology."
+  }
+]

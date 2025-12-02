@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Rheumatoid Arthritis-Associated Cardiovascular Disease (Subclinical/Developing)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology report explicitly states that 'Rheumatoid Arthritis is a chronic inflammatory condition that significantly increases the risk of premature and accelerated atherosclerosis, independent of traditional risk factors' and lists 'Accelerated Atherosclerosis/Coronary Artery Disease (CAD)' and 'Rheumatoid Heart Disease' as suspected etiologies. It highlights RA as a 'significant independent cardiovascular risk factor' and recommends comprehensive cardiovascular risk assessment and baseline cardiac imaging. While no specific cardiac symptoms or diagnostic data are present in the current reports, the systemic nature of RA, as acknowledged by the Cardiologist, strongly indicates a high likelihood of subclinical or developing cardiovascular involvement, necessitating proactive investigation."
+  },
+  {
+    "diagnosis": "Rheumatoid Arthritis-Associated Interstitial Lung Disease (RA-ILD) (Subclinical/Developing)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Pulmonology report, despite the absence of direct pulmonary function tests or imaging, states that the diagnosis of RA 'necessitates a high index of suspicion for associated interstitial lung disease (ILD) or other pulmonary manifestations.' It identifies 'Rheumatoid Arthritis-associated Interstitial Lung Disease (RA-ILD)' as the primary suspected pathology and notes that lung involvement can often be subclinical or precede joint symptoms. The recommended advanced investigation plan, including PFTs and HRCT, underscores the strong clinical suspicion for this serious RA complication, even in the absence of overt respiratory complaints in the current data."
+  },
+  {
+    "diagnosis": "Psychological Distress/Adjustment Disorder related to Chronic Illness",
+    "confidence_level": "Medium-High",
+    "synthesis_reasoning": "While the Psychology report could not provide a specific diagnosis due to a lack of psychological data, it emphatically states that 'it is generally recognized that chronic medical conditions like Rheumatoid Arthritis can significantly impact mental well-being.' It recommends a 'thorough psychological assessment to evaluate for potential emotional distress, coping challenges, or adjustment difficulties related to her diagnosis and chronic pain.' This highlights the inherent risk and high probability of psychological comorbidity with a chronic, systemic, and potentially debilitating disease like RA, even if not explicitly reported by the patient yet. This is a crucial area for proactive assessment and intervention as part of holistic care."
+  }
+]

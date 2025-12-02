@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Irritable Bowel Syndrome (IBS) with Psychosomatic Features",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Psychology report explicitly identifies 'Irritable Bowel Syndrome (IBS) with predominant pain and mixed bowel habits, secondary to psychological distress' as the primary differential diagnosis. It notes Anna's symptoms are 'chronic, medically unexplained gastrointestinal symptoms... despite thorough negative diagnostic work-up,' which implicitly rules out primary physiological causes from other specialties. The report directly connects these physical symptoms to a 'somatic manifestation of underlying psychological distress, emotional dysregulation, and potentially unresolved trauma or chronic stress,' clearly indicating a psychosomatic origin for the GI symptoms."
+  },
+  {
+    "diagnosis": "Functional Somatic Syndrome (e.g., Somatic Symptom Disorder)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Psychology report's 'Case Conceptualization' explicitly states Anna's presentation 'strongly suggests a functional somatic syndrome.' It also includes 'Somatic Symptom Disorder (if there is excessive preoccupation... disproportionate to their medical significance)' in its differential diagnosis. This broader category encompasses IBS as a specific functional disorder but also accounts for the overarching pattern of medically unexplained physical symptoms driven by psychological factors, especially given the 'thorough negative diagnostic work-up' from other medical domains."
+  },
+  {
+    "diagnosis": "Underlying Anxiety and/or Trauma-Related Disorder driving Somatization",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Psychology report identifies 'Generalized Anxiety Disorder (GAD) or Unspecified Anxiety Disorder' and 'Post-Traumatic Stress Disorder (PTSD) or Complex PTSD (C-PTSD)' as significant comorbid and underlying differential diagnoses. It emphasizes that the physical symptoms are a 'somatic manifestation of underlying psychological distress, emotional dysregulation, and potentially unresolved trauma or chronic stress.' This highlights that the GI symptoms are not isolated but are expressions of deeper psychological issues, with anxiety and trauma being prime candidates for driving this somatization process, as described by the psychologist."
+  }
+]

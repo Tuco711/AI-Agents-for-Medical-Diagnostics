@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Major Neurocognitive Disorder, likely Alzheimer's Type with a significant Vascular Cognitive Impairment (VCI) component",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Both Cardiology and Psychology reports converge on significant, progressive cognitive decline over two years, evidenced by an MMSE score of 19/30 and temporal lobe atrophy on MRI. The Psychology report identifies this as a Major Neurocognitive Disorder, most likely Alzheimer's Type, citing its progressive nature and family history. The Cardiology report strongly reinforces a significant Vascular Cognitive Impairment (VCI) component, highlighting Mr. Wilson's age (72), history of hypertension (currently suboptimally controlled at 135/82 mmHg), and hyperlipidemia as critical risk factors that frequently coexist with Alzheimer's and can accelerate cognitive decline."
+  },
+  {
+    "diagnosis": "Undiagnosed or Subclinical Cardiovascular Conditions Contributing to Cognitive Decline",
+    "confidence_level": "Medium-High",
+    "synthesis_reasoning": "The Cardiology report explicitly identifies critical gaps in the current workup, stating that the absence of comprehensive cardiac diagnostics (12-lead ECG, Transthoracic Echocardiogram, Extended Cardiac Rhythm Monitoring) leaves significant unaddressed possibilities. It lists 'Undiagnosed Paroxysmal Atrial Fibrillation or other significant arrhythmia' and 'Subclinical Structural Heart Disease (e.g., moderate-to-severe aortic stenosis, significant diastolic dysfunction)' as highly probable etiologies. These conditions could lead to silent cerebral ischemia or chronic cerebral hypoperfusion, directly contributing to and potentially accelerating Mr. Wilson's observed cognitive decline, especially given his vascular risk factors."
+  },
+  {
+    "diagnosis": "Psychological Distress and Potential Comorbid Mood Disorder Secondary to Neurocognitive Decline",
+    "confidence_level": "Medium-High",
+    "synthesis_reasoning": "While the Psychology report's initial assessment does not meet DSM-5 criteria for primary Major Depressive Disorder or Generalized Anxiety Disorder based on reported symptoms, its case conceptualization profoundly emphasizes the psychological impact of progressive cognitive decline. It states that 'a comorbid Major Depressive Disorder or persistent depressive symptoms are highly probable as a psychological reaction to the cognitive decline and loss of function.' The report also notes that individuals in this stage commonly experience anxiety, frustration, depression, apathy, or agitation, underscoring the need for ongoing monitoring and emotional support as a crucial aspect of holistic care."
+  }
+]

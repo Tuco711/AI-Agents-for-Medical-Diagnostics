@@ -1,6 +1,10 @@
 import os
 import sys
 import io
+from google import genai
+import re
+import json
+
 try:
     from dotenv import load_dotenv
     from pathlib import Path
@@ -23,6 +27,21 @@ except Exception:
 from langchain_core.prompts import PromptTemplate
 from openai import OpenAI
 
+def strip_triple_backticks(text: str) -> str:
+    """Remove surrounding triple-backtick fences like ```json or ``` from model output.
+
+    Examples it handles:
+    ```json\n{...}\n```  -> {...}
+    ```\ntext\n```      -> text
+    """
+    if not isinstance(text, str):
+        return text
+    # Remove leading fence like ``` or ```json (possible whitespace before)
+    text = re.sub(r'^\s*```(?:\w+)?\s*', '', text)
+    # Remove trailing fence ``` with any surrounding whitespace
+    text = re.sub(r'\s*```\s*$', '', text)
+    return text.strip()
+
 class Agent:
     def __init__(self, medical_report=None, role=None, extra_info=None):
         self.medical_report = medical_report
@@ -34,6 +53,7 @@ class Agent:
         openrouter_present = bool(os.getenv("OPENROUTER_API_KEY"))
         openai_present = bool(os.getenv("OPENAI_API_KEY"))
         api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY")
+        api_key = os.getenv("GENAI_API_KEY") or api_key
         if not api_key:
             raise RuntimeError(
                 "No API key found. Environment presence: OPENROUTER_API_KEY="
@@ -41,10 +61,12 @@ class Agent:
                 "Please set OPENROUTER_API_KEY or OPENAI_API_KEY environment variable (do not paste the key into code)."
             )
 
-        self.client = OpenAI(
-            base_url="https://openrouter.ai/api/v1",
-            api_key=api_key,
-        )
+        # self.client = OpenAI(
+        #     base_url="https://openrouter.ai/api/v1",
+        #     api_key=api_key,
+        # )
+
+        self.client = genai.Client(api_key=api_key)
 
     def create_prompt_template(self):
         if self.role == "MultidisciplinaryTeam":
@@ -239,6 +261,7 @@ class Agent:
                     1. Cardiology
                     2. Psychology
                     3. Pulmonology
+                    4. General Practitioner
 
                     ### SCORING CRITERIA (0-10 Scale)
                     * **0-2 (Irrelevant):** No symptoms match this system.
@@ -336,46 +359,59 @@ class Agent:
                 "cardiologist_report": self.extra_info.get("cardiologist_report", "N/A"),
                 "psychologist_report": self.extra_info.get("psychologist_report", "N/A"),
                 "pulmonologist_report": self.extra_info.get("pulmonologist_report", "N/A"),
+                "general_practitioner_report": self.extra_info.get("general_practitioner_report", "N/A"),
             }
         else:
             fmt_kwargs = {"medical_report": self.medical_report}
         
         prompt = self.prompt_template.format(**fmt_kwargs)
-        try:
-            # Allow override of model via environment variable
-            model = os.getenv("OPENROUTER_MODEL", "openai/gpt-oss-20b:free")
+        # try:
+            # # Allow override of model via environment variable
+            # model = os.getenv("OPENROUTER_MODEL", "openai/gpt-oss-20b:free")
 
-            completion = self.client.chat.completions.create(
-                extra_body={},
-                model=model,
-                messages=[{"role": "user", "content": prompt}],
-            )
+            # completion = self.client.chat.completions.create(
+            #     extra_body={},
+            #     model=model,
+            #     messages=[{"role": "user", "content": prompt}],
+            # )
 
-            # Safely extract the assistant text from the response
-            content = None
-            try:
-                content = completion.choices[0].message.content
-            except Exception:
-                # Try alternate common shape
-                try:
-                    content = completion.choices[0].text
-                except Exception:
-                    content = str(completion)
+        response = self.client.models.generate_content(
+        model='gemini-2.5-flash',
+        contents=prompt,
+        config={"temperature": 0.4,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 8192,
+                "response_mime_type": "application/json"}
+        )
+        # Remove possíveis fences de código (```json / ``` ) que o modelo possa incluir
+        return strip_triple_backticks(response.text)
 
-            try:
-                # test print to stdout encoding by encoding/decoding
-                _ = content.encode(sys.stdout.encoding or 'utf-8', errors='strict')
-                # If encoding succeeds, return original content
-                return content
-            except Exception:
-                # Fallback: replace characters that can't be encoded so
-                # printing doesn't crash the process
-                safe = content.encode(sys.stdout.encoding or 'utf-8', errors='replace')
-                safe = safe.decode(sys.stdout.encoding or 'utf-8', errors='replace')
-                return safe
-        except Exception as e:
-            print("Error occurred:", e)
-            return None
+        #     # Safely extract the assistant text from the response
+        #     content = None
+        #     try:
+        #         content = completion.choices[0].message.content
+        #     except Exception:
+        #         # Try alternate common shape
+        #         try:
+        #             content = completion.choices[0].text
+        #         except Exception:
+        #             content = str(completion)
+
+        #     try:
+        #         # test print to stdout encoding by encoding/decoding
+        #         _ = content.encode(sys.stdout.encoding or 'utf-8', errors='strict')
+        #         # If encoding succeeds, return original content
+        #         return content
+        #     except Exception:
+        #         # Fallback: replace characters that can't be encoded so
+        #         # printing doesn't crash the process
+        #         safe = content.encode(sys.stdout.encoding or 'utf-8', errors='replace')
+        #         safe = safe.decode(sys.stdout.encoding or 'utf-8', errors='replace')
+        #         return safe
+        # except Exception as e:
+        #     print("Error occurred:", e)
+        #     return None
 
 # Define specialized agent classes
 class SeniorGeneralPractitioner(Agent):

@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Panic Disorder",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Both the Cardiology and Psychology reports strongly converge on Panic Disorder as the primary etiology. Cardiology notes the patient's 'paroxysmal episodes of intense chest pain, palpitations, shortness of breath, dizziness, sweating, and a profound sense of 'impending doom'' occurring 'without warning,' and explicitly states that the 'constellation of symptoms... strongly points towards panic attacks.' Crucially, the extensive cardiac workup (ECG, cardiac enzymes, echocardiogram, 24-hour Holter) was 'largely unremarkable,' ruling out significant physiological cardiac causes. Psychology provides a definitive diagnosis of 'Panic Disorder (F41.0),' stating the patient presents with 'a classic picture' and that the 'DSM-5 Criteria matches' are met. Psychology further explains how the 'impending doom' is a 'hallmark of panic' and how 'catastrophic misinterpretation of normal bodily sensations' (e.g., occasional PVCs noted by Cardiology) fuels these attacks, directly explaining the ambiguity in the cardiac findings."
+  },
+  {
+    "diagnosis": "Generalized Anxiety Disorder (Comorbid)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The patient's history of anxiety is a consistent theme across both reports, indicating an underlying and pervasive anxiety vulnerability. Cardiology notes his 'medical history includes diagnosed anxiety' and a 'high-stress occupation' as contributing factors. Psychology explicitly identifies 'Generalized Anxiety Disorder (F41.1)' as a 'highly probable' comorbid diagnosis, citing his 'prior diagnosis and family history of GAD.' This underlying anxiety likely serves as a predisposing factor and exacerbates the acute panic attacks, forming a critical component of his overall psychological profile."
+  },
+  {
+    "diagnosis": "Health Anxiety / Illness Anxiety Disorder",
+    "confidence_level": "High",
+    "synthesis_reasoning": "A significant aspect of the patient's distress is his intense preoccupation with his physical symptoms, particularly the fear of a heart attack, despite reassuring medical findings. Psychology directly addresses this, identifying 'Illness Anxiety Disorder (F45.2) or Somatic Symptom Disorder (F45.1) with predominant health-related preoccupation' as a strong comorbidity, stating his 'intense fear of a heart attack despite normal medical findings points strongly to significant health anxiety.' Cardiology's report, while focused on cardiac exclusion, implicitly supports this by noting the patient's 'profound sense of 'impending doom'' and the necessity for 'thorough exclusion of infrequent cardiac arrhythmias' even with a low pre-test probability, indicating the patient's persistent fears drive further investigation. This health anxiety perpetuates the panic cycle by leading to catastrophic misinterpretations of benign bodily sensations."
+  }
+]

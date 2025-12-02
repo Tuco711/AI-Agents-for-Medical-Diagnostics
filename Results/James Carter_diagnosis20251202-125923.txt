@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Insomnia Disorder, Chronic (Psychophysiological Type)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The patient's chief complaint of 'increasing difficulty initiating sleep, frequent nighttime awakenings, and daytime fatigue for the past year' is consistently highlighted across both Cardiology and Psychology reports. The Psychology report provides a strong DSM-5 match for Insomnia Disorder, noting that medical and other sleep-wake disorders (like sleep apnea, ruled out by the sleep study) have been largely excluded as primary causes. The Cardiology report also identifies 'chronic sleep disturbance' and 'daytime fatigue' as central issues, and its 'Anxiety/Stress-Related Sleep Disorder' etiology aligns perfectly with the psychophysiological nature of this diagnosis. Both specialists emphasize the role of high occupational stress and high caffeine intake as perpetuating factors, making this the most direct and well-supported diagnosis."
+  },
+  {
+    "diagnosis": "Chronic Stress Dysregulation / Generalized Anxiety Disorder (Unspecified)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "While the Psychology report notes insufficient explicit symptoms for a full DSM-5 diagnosis of GAD based solely on the initial intake, its 'Case Conceptualization' thoroughly describes a state of 'deeply ingrained patterns of stress dysregulation and emotional constriction,' 'persistent state of hyperarousal,' and an 'overwhelmed nervous system operating in a chronic 'fight or flight' mode.' This directly explains the underlying mechanism for the Insomnia Disorder. The Cardiology report independently identifies 'high occupational stress' and 'Anxiety/Stress-Related Sleep Disorder' as significant factors, further corroborating the central role of chronic anxiety and stress in the patient's presentation. The family history of maternal depression also supports a predisposition to mood/anxiety dysregulation."
+  },
+  {
+    "diagnosis": "Sympathetic Overactivity with Potential for Nocturnal Hypertension and Paroxysmal Arrhythmias",
+    "confidence_level": "Medium-High",
+    "synthesis_reasoning": "This diagnosis bridges the psychological and physiological findings. The Psychology report details the patient's 'persistent state of hyperarousal' and 'chronic 'fight or flight' mode,' which is a direct manifestation of sympathetic overactivity. The Cardiology report explicitly lists 'Nocturnal Hypertension / Sympathetic Overactivity' and 'Paroxysmal Cardiac Arrhythmias' as suspected etiologies, reasoning that 'chronic stress and caffeine can lead to nocturnal BP surges or sustained sympathetic tone' and are 'potent triggers for various arrhythmias.' The patient's history of controlled hypertension, high caffeine intake, and chronic stress, combined with nocturnal awakenings and fatigue (without clear primary cardiac or sleep apnea causes), makes this a highly plausible physiological consequence of the underlying psychological stress and hyperarousal, warranting further cardiac investigation as recommended by Cardiology."
+  }
+]

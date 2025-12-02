@@ -1,0 +1,19 @@
+### Final Diagnosis
+
+[
+  {
+    "diagnosis": "Polycystic Ovary Syndrome (PCOS)",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology report provides a clear clinical picture consistent with Polycystic Ovary Syndrome (PCOS), supported by chief complaints (irregular menses, acne, hirsutism), physical exam (hirsutism, BMI 27.4), family history, and a hormonal profile (elevated LH/FSH, elevated testosterone). Ultrasound findings of enlarged ovaries with multiple follicles further confirm this diagnosis. The report establishes PCOS as the primary underlying physiological condition."
+  },
+  {
+    "diagnosis": "Elevated Long-Term Cardiovascular Risk",
+    "confidence_level": "High",
+    "synthesis_reasoning": "The Cardiology report explicitly identifies PCOS as a 'significant independent risk factor for future cardiovascular disease' and an 'AHA-recognized cardiovascular risk enhancer.' This risk is further compounded by modifiable factors such as the patient's overweight status (BMI 27.4), sedentary lifestyle, and high carbohydrate diet. The report highlights the potential for 'subclinical endothelial dysfunction/accelerated atherosclerosis' even at this young age, indicating a clear long-term physiological risk."
+  },
+  {
+    "diagnosis": "Early-Stage Metabolic Derangements / Insulin Resistance",
+    "confidence_level": "High",
+    "synthesis_reasoning": "Despite normal fasting glucose, the Cardiology report strongly suspects 'early-stage metabolic syndrome/insulin resistance.' This suspicion is based on the presence of PCOS, overweight status, and a high-carbohydrate diet, which are recognized precursors to dyslipidemia, hypertension, and type 2 diabetes. The recommendation for further screening with HbA1c and Oral Glucose Tolerance Test (OGTT) underscores the high likelihood of underlying insulin resistance, a key physiological derangement in PCOS."
+  }
+]
